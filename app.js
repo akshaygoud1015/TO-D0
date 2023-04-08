@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const mongoose=require("mongoose")
 app.set('view engine', 'ejs');
+const port = process.env.PORT || 3001;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
@@ -106,6 +107,4 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
-});
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
