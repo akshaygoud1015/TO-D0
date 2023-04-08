@@ -29,19 +29,16 @@ const itemsschema={
 const Item=new mongoose.model("Item",itemsschema)
 
 const item1=new Item({
-  name:"hello"
+  name:"WELCOME"
 
 })
 const item2=new Item({
-  name:"welcome"
-
-})
-const item3=new Item({
-  name:"excuseme"
+  name:"<------CLICK HERE TO DELETE ITEMS"
 
 })
 
-const arr=[item1,item2,item3]
+
+const arr=[item1,item2]
 
 
 
